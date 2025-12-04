@@ -11,10 +11,6 @@ services:
     volumes:
       - .devcontainer/vimrc:/home/appuser/.config/vim/vimrc:rw
       - .:/home/appuser/workspace:cached
-#   ports:
-#     - "8888:8888"  # optional: run `jupyter lab` inside container on 8888
-#     - "5678:5678"  # Optional: to allow Debugger to access the code running in DevContainer via debugpy
-#     - "22:7676"    # To enable SSH tunneling through the host into Raspberry Pi
     command: /bin/zsh
     environment:
       TZ: "Europe/Zurich"
