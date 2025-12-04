@@ -1,0 +1,70 @@
+" ###### VIM RC Configuration -- towards SC100 
+set encoding=utf-8
+"By the way, if you're having a problem with Vim not counting a sentence for phrases separated by . followed by a single line, you might be in 'compatible' mode. Add set nocompatible into vimrc. In Vi, a sentence is a . followed by two spaces. You should have nocompatible set at all times."
+set nocompatible
+" Disable the arrow buttons. Get used to the way of Vim Navigation
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Chap 02 Buffers, Windows, and Tabs
+set hidden " without this when you switch buffers and you rcurrent buffer is no saved, Vim prompt to dave the file. 
+
+" Browsing files with netrw
+set nocp
+filetype on
+filetype plugin on
+filetype indent on
+set relativenumber
+
+" Turn on Syntax highlighting
+syntax on
+
+"Set tab and space
+set shiftwidth=4 tabstop=4 expandtab
+" wrap lines after 80. Only a Visual break
+set wrap
+set linebreak
+set display+=lastline
+set colorcolumn=81
+
+
+"Search settings
+set incsearch
+set ignorecase
+set smartcase
+set showcmd
+set showmode
+set showmatch
+set hlsearch
+
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+" There are certain files that we would never want to edit with Vim.
+" Wildmenu will ignore files with these extensions.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+
+" STATUS LINE ------------------------------------------------------------ {{{
+" Clear status line when vimrc is reloaded.
+set statusline=
+
+" Status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+
+" Use a divider to separate the left side from the right side.
+set statusline+=%=
+
+" Status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+" Show the status on the second to last line.
+set laststatus=2
+
+" }}}
