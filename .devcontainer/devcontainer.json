@@ -1,0 +1,38 @@
+{
+  "name": "learning-vim-docker-container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "learning-vim",
+  "workspaceFolder": "/home/appuser/workspace",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // --- VSCodeVim integration with your vimrc ---
+        "vim.enableVimrc": false,
+ 
+        // path is inside the container, relative to workspaceFolder
+        "vim.vimrc.path": "/home/appuser/.vimrc",
+        "terminalAllInOne.scripts": [
+          {
+            "name": "Vim Tutor",
+            "script": [
+              "vimtutor"
+            ]
+          },
+        ],
+        "terminalAllInOne.script.disableDescription": true
+      },
+      "extensions": [
+        "darkriszty.markdown-table-prettify",
+        "koehlma.markdown-math",
+        "vscodevim.vim",
+        "yasht.terminal-all-in-one",
+        "openai.chatgpt",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+// "forwardPorts": [8888, 5678],
+  "postCreateCommand": "vim --version"
+}
+
