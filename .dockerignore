@@ -1,0 +1,43 @@
+# Keep the build context lean and avoid shipping local artifacts into the dev container image.
+
+# Version control metadata
+.git
+.gitmodules
+.gitignore
+
+# Editor and OS noise
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Vim swap / session files (mirrors .gitignore)
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+.netrwhist
+*~
+[._]*.un~
+tags
+
+# Dependency and build outputs
+node_modules
+bower_components
+dist
+build
+.cache
+coverage
+tmp
+*.log
+*.tmp
+
+# Python virtual environments
+.venv
+venv
+
+# Local environment files
+.env
+.env.*
