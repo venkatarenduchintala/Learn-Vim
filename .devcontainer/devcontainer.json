@@ -1,6 +1,6 @@
 {
   "name": "learning-vim-docker-container",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "docker-compose.yml",
   "service": "learning-vim",
   "workspaceFolder": "/home/appuser/workspace",
   "shutdownAction": "stopCompose",

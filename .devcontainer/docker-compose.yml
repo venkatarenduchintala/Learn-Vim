@@ -1,7 +1,7 @@
 services:
   learning-vim:
     build:
-      context: .
+      context: ..
       dockerfile: .devcontainer/Dockerfile
     container_name: learning-vim
     tty: true
@@ -9,8 +9,8 @@ services:
     working_dir: /home/appuser/workspace
     user: "appuser"
     volumes:
-      - .devcontainer/vimrc:/home/appuser/.config/vim/vimrc:rw
-      - .:/home/appuser/workspace:cached
+      - ../.devcontainer/vimrc:/home/appuser/.config/vim/vimrc:rw
+      - ..:/home/appuser/workspace:cached
     command: /bin/zsh
     environment:
       TZ: "Europe/Zurich"
