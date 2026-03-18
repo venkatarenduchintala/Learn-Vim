@@ -8,7 +8,7 @@
     "vscode": {
       "settings": {
         // --- VSCodeVim integration with your vimrc ---
-        "vim.enableVimrc": false,
+        "vim.enableVimrc": true,
  
         // path is inside the container, relative to workspaceFolder
         "vim.vimrc.path": "/home/appuser/.vimrc",
@@ -28,7 +28,8 @@
         "vscodevim.vim",
         "yasht.terminal-all-in-one",
         "openai.chatgpt",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "GitHub.copilot-chat"
       ]
     }
   },
